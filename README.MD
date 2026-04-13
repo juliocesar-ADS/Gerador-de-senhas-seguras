@@ -24,11 +24,7 @@ Bibliotecas padrão:
 random
 string
 time
-📦 Como executar o projeto
-Clone o repositório:
-git clone https://github.com/seu-usuario/seu-repositorio.git
-Acesse a pasta:
-cd seu-repositorio
+
 Execute o programa:
 python app.py
 📚 O que foi praticado
