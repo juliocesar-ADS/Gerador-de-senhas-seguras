@@ -40,8 +40,12 @@ while True:
             print("Sua senha é:", salvo)
 
     elif opcao == 2:
-        print("Suas senhas são:\n")
-        print(senhas)
+        if senhas == []:
+            print("não tem senhas")
+        else:
+            print("Suas senhas são:\n")
+            print(senhas)
+        
 
     elif opcao == 3:
         print("Saindo...")
