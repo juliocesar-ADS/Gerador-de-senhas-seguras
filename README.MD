@@ -56,3 +56,7 @@ Projeto desenvolvido por Julio César 🚀
 📌 Status do projeto
 
 🟢 Em desenvolvimento (versão inicial)
+
+VERSAO 1.2 
+atualizei bugs que davam ao digitar letras ou numeros fluantes ao escolher opção que deseja usar. 
+Tudo isso usanto try e except que são otimos comandos para evitar bugs em sistemas
