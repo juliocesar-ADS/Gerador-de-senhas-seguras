@@ -15,38 +15,46 @@ while True:
           "|   [2] VISUALIZAR SENHAS   |\n"
           "|        [3] SAIR           |\n")
     
-    opcao = int(input("DIGITE UMA OPÇÃO: "))
-
-    if opcao == 1:
-        repeticao = int(input("quantas senhas deseja: "))
+    try:
+        opcao = int(input("DIGITE UMA OPÇÃO: "))
+        if opcao != 1 and opcao != 2 and opcao != 3:
+            print("DIGITE OPÇÃO 1, 2 OU 3")
+            time.sleep(1)
         
-        for i in range(repeticao):
+        if opcao == 1:
 
-            def gerar_senha():
-                comprimento = int(input("Quantos caracteres sua senha vai ter? "))
-                time.sleep(1)
+            repeticao = int(input("quantas senhas deseja: "))
 
-                caracteres = string.ascii_letters + string.digits + string.punctuation
-                senha = [] 
+            for i in range(repeticao):
 
-                for i in range(comprimento):
-                    caractere = random.choice(caracteres)
-                    senha.append(caractere)
+                def gerar_senha():
+                    comprimento = int(input("Quantos caracteres sua senha vai ter? "))
+                    time.sleep(1)
 
-                return ''.join(senha)
+                    caracteres = string.ascii_letters + string.digits + string.punctuation
+                    senha = [] 
 
-            salvo = gerar_senha()
-            senhas.append(salvo)  
-            print("Sua senha é:", salvo)
+                    for i in range(comprimento):
+                        caractere = random.choice(caracteres)
+                        senha.append(caractere)
 
-    elif opcao == 2:
-        if senhas == []:
-            print("não tem senhas")
-        else:
-            print("Suas senhas são:\n")
-            print(senhas)
-        
+                    return ''.join(senha)
 
-    elif opcao == 3:
-        print("Saindo...")
-        break
+                salvo = gerar_senha()
+                senhas.append(salvo)  
+                print("Sua senha é:", salvo)
+
+        elif opcao == 2:
+            if senhas == []:
+                print("não tem senhas")
+            else:
+                print("Suas senhas são:\n")
+                print(senhas)
+            
+
+        elif opcao == 3:
+            print("Saindo...")
+            break
+    except:
+        print("Digite uma opção valida")
+        time.sleep(1)
